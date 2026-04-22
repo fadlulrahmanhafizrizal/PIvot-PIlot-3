@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offline — Pivot Pilot</title>
+  <style>
+    /* CSS kamu sudah sangat oke, saya pertahankan */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Syne', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .logo-img { 
+      width: 80px; 
+      height: 80px; 
+      margin-bottom: 20px; 
+      border-radius: 16px;
+      object-fit: contain;
+      filter: grayscale(1); 
+      opacity: 0.8;
+    }
+    h2 { font-size: 24px; font-weight: 800; margin-bottom: 12px; letter-spacing: -0.5px; color: #3b82f6; }
+    p { font-size: 15px; color: #94a3b8; line-height: 1.6; max-width: 320px; margin: 0 auto; }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 32px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: #2563eb; }
+    .btn:active { transform: scale(0.95); }
+  </style>
+</head>
+<body>
+  <div>
+    <img src="icons/logo-pivot.png" alt="Logo Pivot Pilot" class="logo-img">
+    
+    <h2>Koneksi Terputus</h2>
+    <p>Tenang, Fadlul. Pivot Pilot tetap menjaga data strategi bisnismu. Kamu bisa terus bekerja dan data akan sinkron saat internet kembali.</p>
+    
+    <a class="btn" href="javascript:location.reload()">🔄 Cek Koneksi</a>
+  </div>
+
+  <script>
+    // Fitur Tambahan: Otomatis kembali ke dashboard jika internet terdeteksi online lagi
+    window.addEventListener('online', () => {
+      window.location.href = './index.html';
+    });
+  </script>
+</body>
+</html>
