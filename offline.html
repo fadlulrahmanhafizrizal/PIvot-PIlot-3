@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Offline — Pivot Pilot</title>
+  
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0f172a">
+
+  <style>
+    /* Menggunakan font yang sama dengan index agar visual konsisten */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Syne', sans-serif;
+      background: #0f172a; /* Warna sama dengan theme_color di manifest */
+      color: #f1f5f9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .container {
+      max-width: 400px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .logo-img { 
+      width: 80px; 
+      height: 80px; 
+      margin-bottom: 24px; 
+      border-radius: 20px;
+      object-fit: contain;
+      /* Efek grayscale untuk menandakan sedang offline */
+      filter: grayscale(1); 
+      opacity: 0.8;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    }
+    h2 { 
+      font-size: 26px; 
+      font-weight: 800; 
+      margin-bottom: 12px; 
+      letter-spacing: -0.5px; 
+      color: #3b82f6; 
+    }
+    p { 
+      font-size: 15px; 
+      color: #94a3b8; 
+      line-height: 1.6; 
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #3b82f6;
+      color: white;
+      border-radius: 14px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover { 
+      background: #2563eb; 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    }
+    .btn:active { transform: scale(0.95); }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="icons/logo-pivot.png" alt="Pivot Pilot Logo" class="logo-img">
+    
+    <h2>Koneksi Terputus</h2>
+    <p>Pivot Pilot tidak dapat terhubung ke server. Tenang, kamu masih bisa mengakses data yang sudah tersimpan sebelumnya.</p>
+    
+    <a href="index.html" class="btn">Coba Lagi</a>
+  </div>
+
+  <script>
+    // Cek otomatis jika koneksi kembali online
+    window.addEventListener('online', () => {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
