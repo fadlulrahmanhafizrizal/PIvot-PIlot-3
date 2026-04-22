@@ -1,0 +1,150 @@
+{
+  "id": "Pivot-Pilot-3-v1",
+  "name": "Pivot Pilot — The Startup Strategist",
+  "short_name": "Pivot Pilot",
+  "description": "Aplikasi manajemen risiko dan adaptasi strategi untuk pendiri startup digital. Diagnosa kegagalan, simulasi pivot, dan catat perjalanan bisnismu.",
+  "start_url": "./index.html",
+  "scope": "/Pivot-Pilot-3/",
+  "display": "standalone",
+  "display_override": [
+    "tabbed",
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "tab_strip": {
+    "home_tab": {
+      "scope_patterns": [
+        { "pathname": "/Pivot-Pilot-3/" },
+        { "pathname": "/Pivot-Pilot-3/index.html" }
+      ]
+    },
+    "new_tab_button": {
+      "url": "./index.html"
+    }
+  },
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait",
+  "dir": "ltr",
+  "lang": "id-ID",
+  "categories": ["business", "productivity", "finance"],
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.pivotpilot.app",
+      "id": "com.pivotpilot.app"
+    }
+  ],
+  "iarc_rating_id": "e84c78b4-3235-4670-bc6d-000000000000",
+  "handle_links": "auto",
+  "scope_extensions": [
+    { "origin": "https://fadlulrahmanhafizrizal.github.io" },
+    { "origin": "*.github.io" }
+  ],
+  "icons": [
+    {
+      "src": "icons/logo-pivot.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/logo-pivot.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/promo-4.jpg",
+      "sizes": "1376x768",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Pivot Pilot Dashboard v3.0 - Desktop View"
+    },
+    {
+      "src": "icons/promo-1.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Tampilan Dashboard Utama"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Buka Dashboard",
+      "short_name": "Dashboard",
+      "url": "./index.html",
+      "icons": [
+        { 
+          "src": "icons/logo-pivot.png", 
+          "sizes": "1024x1024",
+          "type": "image/png" 
+        }
+      ]
+    }
+  ],
+  "widgets": [
+    {
+      "name": "Pivot Pilot Stats",
+      "short_name": "Stats",
+      "description": "Cek skor kesehatan bisnismu secara instan.",
+      "tag": "stats",
+      "template": "stats-widget",
+      "ms_ac_template": "stats-widget.json",
+      "data": "stats-data.json",
+      "type": "application/json",
+      "icons": [
+        {
+          "src": "icons/logo-pivot2.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ],
+      "screenshots": [
+        {
+          "src": "icons/promo-1.png",
+          "sizes": "1080x1920",
+          "type": "image/png",
+          "label": "Widget Preview"
+        }
+      ]
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "./index.html",
+      "accept": {
+        "text/plain": [".txt", ".md"],
+        "application/json": [".json"]
+      }
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+pivot",
+      "url": "./index.html?type=%s"
+    }
+  ],
+  "share_target": {
+    "action": "./index.html",
+    "method": "GET",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url"
+    }
+  },
+  "note_taking": {
+    "new_note_url": "./index.html"
+  },
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "edge_side_panel": {
+    "preferred_width": 400
+  }
+}
